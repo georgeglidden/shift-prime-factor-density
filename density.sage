@@ -12,5 +12,6 @@ def plot_shiftprimes_factordensity(k,N):
     X = [p for p in primes(N) if p > 2]
     Y = [shiftprimes_factordensity(k,x) for x in X]
     return scatter_plot(list(zip(X, Y)), markersize=1, facecolor='black')
-N = 500
-sum(plot_shiftprimes_factordensity(k,N) for k in range(100))
+N = 200
+b = 1000
+sum(plot_shiftprimes_factordensity(k,N) for k in range(-b,b))
